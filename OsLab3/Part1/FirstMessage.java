@@ -1,10 +1,10 @@
-package OsLab3;
-public class SecondMessage extends Thread{
-
+package OsLab3.Part1;
+public class FirstMessage extends Thread{
+	
 	SharedScreen myScreen;
 	String message;
 	
-	public SecondMessage(SharedScreen s, String m)
+	public FirstMessage(SharedScreen s, String m)
 	{
 		myScreen = s;
 		message = m;
@@ -14,7 +14,7 @@ public class SecondMessage extends Thread{
 	{
 		for(int i=0;i<20;i++)
 		{
-			myScreen.GoodByeMessage(message);
+			myScreen.HelloMessage(message);
 		}
 	}
 }

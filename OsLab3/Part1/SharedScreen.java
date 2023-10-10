@@ -1,4 +1,4 @@
-package OsLab3;
+package OsLab3.Part1;
 public class SharedScreen {
 
 	boolean turn = false; ///When it is flase it is time for hello
