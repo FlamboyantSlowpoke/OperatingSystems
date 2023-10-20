@@ -1,4 +1,4 @@
-package OsLab3.Part1;
+package Part1;
 public class FirstMessage extends Thread{
 	
 	SharedScreen myScreen;

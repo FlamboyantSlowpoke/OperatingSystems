@@ -1,4 +1,4 @@
-package OsLab3.Part2;
+package Part2;
 
 public class msg1 extends Thread{
     SharedScreen myScreen;

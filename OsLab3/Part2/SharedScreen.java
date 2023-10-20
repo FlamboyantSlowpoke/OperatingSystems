@@ -1,7 +1,7 @@
-package OsLab3.Part2;
+package Part2;
 
 public class SharedScreen {
-    int turn = 1; ///When it is false it is time for hello
+    int turn = 1; 
 	
 	public SharedScreen()
 	{
@@ -10,7 +10,7 @@ public class SharedScreen {
 	
 	public synchronized void MyMessage(String message)
 	{
-		while(turn==1)
+		while(turn != 1)
 		{
 			try 
 			{
@@ -24,13 +24,13 @@ public class SharedScreen {
 		}
 		
 		System.out.println(message);
-		turn++;
+		turn = 1;
 		notifyAll();
 	}
 	
 	public synchronized void NameMessage(String message)
 	{
-		while(turn == 2)
+		while(turn != 2)
 		{
 			try 
 			{
@@ -45,13 +45,13 @@ public class SharedScreen {
 		}
 		
 		System.out.println(message);
-		turn++;
+		turn = 2;
 		notifyAll();
 	}
 
     public synchronized void IsMessage(String message)
     {
-        while(turn==3)
+        while(turn != 3)
         {
             try 
             {
@@ -65,13 +65,13 @@ public class SharedScreen {
         }
         
         System.out.println(message);
-        turn++;
+        turn = 3;
         notifyAll();
     }
 
     public synchronized void BenMessage(String message)
     {
-        while(turn == 4)
+        while(turn != 4)
         {
             try 
             {
@@ -86,7 +86,7 @@ public class SharedScreen {
         }
         
         System.out.println(message);
-        turn = 1;
+        turn = 4;
         notifyAll();
 }
 
